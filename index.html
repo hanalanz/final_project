@@ -126,7 +126,7 @@
   	padding-bottom: 70px;
   }
 
-  #koenig{
+ .ek{
   	color: #119B4B;
   }
 
@@ -137,6 +137,55 @@
   .link{
   	margin-top: 50px;
   	margin-left: 315px;
+  }
+
+  button{
+  	text-decoration: none;
+  	border: none;
+  	background-color: transparent;
+  	font-size: 25px;
+  }
+
+ /* .ezra{
+  	position: absolute;
+  }*/
+
+  img{
+  	height: 25%;
+  }
+
+  #epic{
+  	position: absolute;
+  	height: 50%;
+  	transform: rotate(180deg) scaleX(-1);
+  	display: none;	
+  }
+
+  #nypic{
+  	 position: absolute;
+  	height: 25%;
+  	padding-top: 520px;
+  	padding-left: 300px;
+  	transform: rotate(-10deg);
+  	display: none;
+
+  }
+
+  #vwpic{
+  	 position: absolute;
+  	height: 40%;
+  	margin-left: 800px;
+  	transform: rotate(180deg);
+	display: none;
+  }
+
+  #tcpic{
+    position: absolute;
+  	height: 25%;
+  	margin-left: 700px;
+	padding-top: 520px;
+	transform: rotate(10deg);
+	display: none;
   }
 
 
@@ -171,9 +220,17 @@
 		</div>
 
 		<div id="ezra">
+
+			<img src="ezra.png" id="epic">
+			<img src="neoyokio.png" id="nypic">
+			<img src="vw.png" id="vwpic">
+			<img src="timecrisis.jpg" id="tcpic">
+ 
+			<div class="ezra">
 			<h1 class="heads"> Ezra Koenig</h1>
 	
-			<p><button class="ek" id="koenig">Ezra Koenig</button> is an American musician, singer-songwriter, television producer, record producer, radio personality, and screenwriter. He is best known as the lead vocalist and guitarist of indie rock band <button class="vw" id="koenig">Vampire Weekend</button> , whose most recent album, Father of the Bride, was released in 2019. Additionally, Koenig is the creator of the Netflix animated comedy series <button class="ny" id="koenig">Neo Yokio</button>  and also hosts the Apple Music radio talk show <button class="tc" id="koenig">Time Crisis </button>  with Ezra Koenig.</p>
+			<p><button class="ek" id="koenig">Ezra Koenig</button> is an American musician, singer-songwriter, television producer, record producer, radio personality, and screenwriter. He is best known as the lead vocalist and guitarist of indie rock band <button class="ek" id="koenigtwo">Vampire Weekend</button> , whose most recent album, Father of the Bride, was released in 2019. Additionally, Koenig is the creator of the Netflix animated comedy series <button class="ek" id="koenigclick">Neo Yokio</button>  and also hosts the Apple Music radio talk show <button class="ek" id="koenigfour">Time Crisis </button>  with Ezra Koenig.</p>
+			</div>
 
 		</div>
 
@@ -293,11 +350,61 @@
 
 </div>
 <script type="text/javascript">
-	var ezra = document.getElementsByClassName;
+
+	var ezra = document.getElementById("koenig");
+	var vw = document.getElementById("koenigtwo");
+	var tc = document.getElementById("koenigfour");
+	var ny = document.getElementById("koenigclick");
 
 	ezra.onclick = function(){
-		console.log("hey");
+		// console.log("hello");
+		var x = document.getElementById("epic");
+
+		 if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 	};
+
+	vw.onclick = function(){
+			// console.log("helloagain");
+		var vw = document.getElementById("vwpic");
+
+		 if (vw.style.display === "none") {
+    vw.style.display = "block";
+  } else {
+    vw.style.display = "none";
+  }
+	};
+
+
+	tc.onclick = function(){
+
+		var tc = document.getElementById("tcpic");
+			
+	if (tc.style.display === "none") {
+    tc.style.display = "block";
+  } else {
+    tc.style.display = "none";
+  }
+	};
+
+ny.onclick = function(){
+
+	var y = document.getElementById("nypic");
+
+	 if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+
+};
+
+
+
+
 </script>
 </body>
 </html>
