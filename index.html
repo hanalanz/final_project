@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="https://use.typekit.net/lit1gfr.css">
 <style type="text/css">
 
+	html{
+		scroll-behavior: smooth;
+	}
+
 	body{
 		font-family: futura-pt, sans-serif;
 		font-weight: 400;
@@ -36,6 +40,7 @@
 		display: flex;
 		flex-direction: column;
 		font-size: 25px;
+		padding-left: 20px;
 
 	}
 
@@ -132,9 +137,10 @@
   	color: #119B4B;
   }
 
-  .convotext :hover{
-  	color: #F2691A;
+ .answer .convotext:hover{
+  color: #F2691A;
   }
+
 
   .link{
   	margin-top: 85px;
@@ -256,7 +262,7 @@
 
 	
 </style>
-<body>
+<body id="body">
 <div class="container">
 	
 	<div class="left">
@@ -462,6 +468,8 @@
 	var lp = document.getElementById("planet");
 	var stalker = document.getElementById("stalker");
 	var spring = document.getElementById("spring");
+	var scroll = document.getElementById("scroll");
+	var body = document.getElementById("body");
 
 
 
@@ -569,6 +577,15 @@ ny.onclick = function(){
 
 };
 
+
+scroll.onclick = function(e){
+
+	e.preventDefault();
+	body.animate(
+	{
+
+	});
+}
 
 
 
