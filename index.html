@@ -44,7 +44,14 @@
 
 	}
 
+/*	p{
+		z-index: 1;
+	}
 
+	img{
+		z-index: -1;
+	}
+*/
     .circle {
       width: 600px;
       height: 600px;
@@ -157,6 +164,10 @@
 	font-style: normal;
   }
 
+  .images2{
+  	z-index: -1;
+  }
+
  /* .ezra{
   	position: absolute;
   }*/
@@ -175,8 +186,8 @@
   #nypic{
   	 position: absolute;
   	height: 25%;
-  	padding-top: 520px;
-  	padding-left: 300px;
+  	margin-top: 520px;
+  	margin-left: 300px;
   	transform: rotate(-10deg);
   	display: none;
 
@@ -232,9 +243,10 @@
 
 #locpic{
 	position: absolute;
-	padding-top: 500px;
-	padding-left: 1070px;
+	margin-top: 500px;
+	margin-left: 1070px;
 	display: none;
+	z-index: 0;
 }
 
 .listbutton{
@@ -290,11 +302,11 @@
 
 		<div id="ezra">
 
-			<img src="ezra.png" id="epic">
+			<div><img src="ezra.png" id="epic">
 			<img src="neoyokio.png" id="nypic">
 			<img src="vw.png" id="vwpic">
 			<img src="timecrisis.jpg" id="tcpic">
- 
+			 </div>
 			<div class="ezra">
 			<h1 class="heads"> Ezra Koenig</h1>
 	
@@ -427,11 +439,13 @@
 
 		<div id="things">
 
+			<div class="imgages2">
 			<img src="stalker.png" id="stalkerpic">
 			<img src="lp.jpg" id="lppic">
 			<img src="spring.jpg" id="spic">
 			<img src="loc.png" id="locpic">
 			<img src="tokyoolymdias.png" id="topic">
+		</div>
 
 			<h1 class="heads">Ezra Recommends</h1>
 			<div class="t">
@@ -443,10 +457,10 @@
 				<p class="list"> 5 Movies That Are Long and/or Slow:</p>
 				<ol>
 					<li><button class="listbutton" id="tokyo">Tokyo Olympiad (1965)</button></li>
-					<li><button class="listbutton" id="limits">The Limits of Control (2009)</button></li>
 					<li><button class="listbutton" id="planet">The Loneliest Planet (2011)</button></li>
 					<li><button class="listbutton" id="stalker">Stalker (1979)</button></li>
 					<li><button class="listbutton" id="spring">Where Spring Comes Late (1970)</button></li>
+					<li><button class="listbutton" id="limits">The Limits of Control (2009)</button></li>
 				</ol>
 				</div>
 			</div>
@@ -578,14 +592,14 @@ ny.onclick = function(){
 };
 
 
-scroll.onclick = function(e){
+// scroll.onclick = function(e){
 
-	e.preventDefault();
-	body.animate(
-	{
+// 	e.preventDefault();
+// 	body.animate(
+// 	{
 
-	});
-}
+// 	});
+// }
 
 
 
